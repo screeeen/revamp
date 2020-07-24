@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import arenaIcon from './../images/arena_icon.png'
+import surfizeIcon from './../images/surfize_icon.png'
 
 export default function LeftMenu() {
   return (
-    <div style={{ border: '1px solid white', flex: '1' }}>
+    <div style={{ border: '1px solid white', width: '20%',boxSizing :"content-box"  }}>
       <h3>SCREEN IMPLOSION</h3>
       <p>
         Screen Implosion is a games label and producer of classic arcade games
@@ -26,11 +28,11 @@ export default function LeftMenu() {
         <input type="submit" value="Submit" />
       </form>
       <h3>OTHER GAMES</h3>
-      <Link to="">
-        <img src="" alt="" />
+      <Link to="/arena">
+        <img src={arenaIcon} />
       </Link>
-      <Link to="">
-        <img src="" alt="" />
+      <Link to="/surfize">
+        <img src={surfizeIcon} />
       </Link>
     </div>
   );

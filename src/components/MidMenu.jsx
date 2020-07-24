@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function MidMenu() {
+
+const centroStyle = { border: '1px solid white', flex: '1' }
+
+
+export default function MidMenu({text}) {
   return (
-    <div style={{ border: '1px solid white', flex: '1', flexGrow: 2.2 }}>
-      centro
+    <div style={centroStyle}>
+      <p>{text}</p>
     </div>
   );
 }

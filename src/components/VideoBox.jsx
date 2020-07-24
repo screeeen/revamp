@@ -3,11 +3,15 @@ import ReactPlayer from 'react-player';
 
 // Render a YouTube video player
 export default ({ url }) => (
-  <ReactPlayer
-    style={{
-      border: '1px solid white',
-    }}
+  <ReactPlayer width={960} height={540}
     url="https://vimeo.com/152825032"
+    config={{
+      vimeo: {
+        playerOptions: {
+        width: 960,
+        }
+      }
+    }}
   />
 
 );
