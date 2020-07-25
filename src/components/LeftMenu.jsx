@@ -5,7 +5,7 @@ import surfizeIcon from './../images/surfize_icon.png'
 
 export default function LeftMenu() {
   return (
-    <div style={{ border: '1px solid white', width: '20%',boxSizing :"content-box"  }}>
+    <div style={{ border: '1px solid white', width: '20%',flex: '1 1 20%'  }}>
       <h3>SCREEN IMPLOSION</h3>
       <p>
         Screen Implosion is a games label and producer of classic arcade games

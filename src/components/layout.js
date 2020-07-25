@@ -19,7 +19,7 @@ const threeColumns =  {
 
 
 
-const Layout = ({ children }) => {
+const Layout = (url,{ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,16 +34,14 @@ const Layout = ({ children }) => {
     <>
       <div style={{ margin: '0 auto', maxWidth: 960, padding: '0 1.0875rem 1.45rem' }}>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <VideoBox url="https://www.youtube.com/watch?v=OSSpVLpuVWA" />
-        <main  style={threeColumns}>{children}</main>
+        {console.log(url,url.children)}
+        <VideoBox url={url} />
+        <main  style={threeColumns}>{url.children}</main>
         <Footer />
       </div>
     </>
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;
