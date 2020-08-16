@@ -5,37 +5,54 @@ import MidMenu from '../../components/MidMenu'
 import LeftMenu from '../../components/LeftMenu'
 import RightMenu from '../../components/RightMenu'
 import monumentPic from '../../images/monument.png'
+import kao_Pic from '../../images/kao_.png'
+import palc_Pic from '../../images/palc.png'
+import pallozas_Pic from '../../images/pallozas.png'
+import pico_Pic from '../../images/pico.png'
+import vertical_Pic from '../../images/vertical.png'
 import awardsPic from '../../images/Awards_layer_vert.png'
 
-const imageStyle ={
-  width:'80%',
+const imageStyle = {
+  width: '80%',
 }
 
 const iFrameStyle = {
-  width:"100%",
-  height:"165",
-  frameBorder:"0",
-  marginLeft:"5%"
+  width: "100%",
+  height: "165",
+  frameBorder: "0",
+  marginLeft: "5%"
+}
+
+const grid = {
+  columnCount: '3',
+  padding: '0',
+  margin: '0',
 }
 
 export default function index() {
   return (
     <Layout url={'https://vimeo.com/152825032'}>
-    <SEO title="Home" />
+      <SEO title="Downhill Chapter One" />
       <LeftMenu />
       <MidMenu >
-      <img style={imageStyle} src={awardsPic} />
-      <img  style={imageStyle} src={monumentPic} />
-      <iframe style ={iFrameStyle} src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></iframe>
+        <img style={imageStyle} src={awardsPic} />
+        <div style={grid}>
+          <img style={imageStyle} src={monumentPic} />
+          <img style={imageStyle} src={kao_Pic} />
+          <img style={imageStyle} src={palc_Pic} />
+          <img style={imageStyle} src={pallozas_Pic} />
+          <img style={imageStyle} src={pico_Pic} />
+          <img style={imageStyle} src={vertical_Pic} />
+        </div>
+        <iframe style={iFrameStyle} src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></iframe>
       </MidMenu>
-      <RightMenu> 
-        <h3>DOWNHILL* CHAPTER ONE (iOS / ANDROID)</h3>
+      <RightMenu>
+        <h3>DOWNHILL* CHAPTER ONE</h3>
         <p>
           Downhill* is an endless free fall on a minimal landscape full strange
           sculptures and environments. A game with extraordinary graphics and
           addictive gameplay.
         </p>
-        <p>◊◊◊◊◊◊</p>
         <p>Features:</p>
         <ul>
           <li>Fast & Smooth Scrolling Action</li>
@@ -54,8 +71,8 @@ export default function index() {
           <li>Official Selection Casual Connect Tel Aviv 2015</li>
           <li>Official Selection AZPlay Bilbao Spain 2015</li>
         </ul>
-      </RightMenu> 
-      
-  </Layout>
+      </RightMenu>
+
+    </Layout>
   )
 }

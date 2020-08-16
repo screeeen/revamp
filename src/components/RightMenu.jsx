@@ -3,10 +3,15 @@ import React from 'react';
 
 
 
-export default function RightMenu({children}) {
+export default function RightMenu({ children }) {
+  const rightMenuStyle = {
+    // border: '1px solid white',
+    flex: '1 1 20%'
+  }
+
   return (
-    <div style={{ border: '1px solid white', flex: '1 1 20%' }}>
+    <div style={rightMenuStyle}>
       {children}
-      </div>
+    </div>
   );
 }
