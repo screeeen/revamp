@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const centroStyle = { 
-  border: '4px solid red',
+border: '1px solid red',
 boxSizing:'content-box',
 textAlign: 'center',
 // display:'flex',
