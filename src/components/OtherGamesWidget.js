@@ -14,24 +14,18 @@ const links = [
   { path: "/eagleCup", src: cupMinute },
 ];
 
-export const getFrames = pathName => {
-  console.log(pathName);
-
-  return links.map(page => {
-    return (
-      page.path !== pathName && (
-        <Link to="page.path">
-          <ImageStyle src={page.src} />
-        </Link>
-      )
-    );
-  });
-};
-
 const OtherGames = () => (
   <>
     <h3>OTHER GAMES</h3>
-    {getFrames(document.location.pathname)}
+    {links.map(page => {
+      return (
+        page.path !== document.location.pathname && (
+          <Link to="page.path">
+            <ImageStyle src={page.src} />
+          </Link>
+        )
+      );
+    })}
   </>
 );
 
