@@ -15,7 +15,7 @@ export default function index() {
       <LeftMenu />
       <MidMenu>
         <img style={imageStyle} src={desertPic} />
-        <iframe frameborder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></iframe>
+        <iframe frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></iframe>
       </MidMenu>
       <RightMenu>
 

@@ -1,23 +1,16 @@
 // import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Link from "gatsby-link"
-import logo from "../images/sc_anim_glitch-2.gif"
+import PropTypes from "prop-types";
+import React from "react";
+import Link from "gatsby-link";
+import logo from "../images/sc_anim_glitch-2.gif";
+import { LogoWrapper, HeaderWrapper } from "./styled/styledLayout";
+import styled from "styled-components";
 
 export default ({ siteTitle }) => (
-  <ul
-    style={{
-      listStyle: "none",
-      display: "flex",
-      justifyContent: "space-between",
-      // border: "1px solid white",
-      alignItems: "flex-end",
-      padding: "40px 0 0 0px",
-    }}
-  >
+  <HeaderWrapper>
     <li>
       <Link to="/">
-        <img src={logo} alt="" />
+        <LogoWrapper src={logo} alt="" />
       </Link>
     </li>
     <li>
@@ -41,8 +34,8 @@ export default ({ siteTitle }) => (
     <li>
       <Link to="/devlog">DEVLOG</Link>
     </li>
-  </ul>
-)
+  </HeaderWrapper>
+);
 
 // Header.propTypes = {
 //   siteTitle: PropTypes.string,

@@ -1,9 +1,0 @@
-main {
-  background-color: black;
-  background-color: black;
-  /* border: 1px solid blue; */
-
-  justify-content: space-around;
-  display: flex;
-  flex-flow: column wrap;
-}

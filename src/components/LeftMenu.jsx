@@ -2,17 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 import arenaIcon from './../images/arena_icon.png'
 import surfizeIcon from './../images/surfize_icon.png'
+import { SideMenuStyle, ImageStyle } from './styled/styledLayout';
 
 export default function LeftMenu() {
 
-  const leftMenuStyle = {
-    // border: '1px solid white',
-    width: '20%',
-    flex: '1 1 20%'
-  }
-
   return (
-    <div style={leftMenuStyle}>
+    <SideMenuStyle>
       <h3>SCREEN IMPLOSION</h3>
       <p>
         Screen Implosion is a games label and producer of classic arcade games
@@ -29,18 +24,18 @@ export default function LeftMenu() {
       </form> */}
       <form>
         <label>
-          Name:
+          <p>Name:</p>
           <input type="text" name="name" />
         </label>
         <input type="submit" value="Submit" />
       </form>
       <h3>OTHER GAMES</h3>
       <Link to="/arena">
-        <img src={arenaIcon} />
+        <ImageStyle src={arenaIcon} />
       </Link>
       <Link to="/surfize">
-        <img src={surfizeIcon} />
+        <ImageStyle src={surfizeIcon} />
       </Link>
-    </div>
+    </SideMenuStyle>
   );
 }

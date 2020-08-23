@@ -1,21 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./Header"
-
-import "./layout.css"
-import VideoBox from "./VideoBox"
-import LeftMenu from "./LeftMenu"
-import RightMenu from "./RightMenu"
-import Footer from "./Footer"
-
-const threeColumns = {
-  display: "flex",
-  flexFlow: "row nowrap",
-  flex: "1 1 1",
-  color: "white",
-  // border: "1px solid #ff00ff",
-}
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Header from "./Header";
+// import "./layout.css";
+import { GlobalStyle } from "../theme/global-style";
+import VideoBox from "./VideoBox";
+import Footer from "./Footer";
+import { ThreeColumns } from "./styled/styledLayout";
 
 const Layout = url => {
   const data = useStaticQuery(graphql`
@@ -26,25 +17,26 @@ const Layout = url => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
+      <GlobalStyle />
       <div
         style={{
-          margin: "0 auto",
-          maxWidth: 960,
-          padding: "0 1.0875rem 1.45rem",
+          margin: `0 auto`,
+          maxWidth: 800,
+          // padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <Header siteTitle={data.site.siteMetadata.title} />
         {console.log(url.url)}
         {url.url && <VideoBox url={url} />}
-        <main style={threeColumns}>{url.children}</main>
+        <ThreeColumns>{url.children}</ThreeColumns>
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

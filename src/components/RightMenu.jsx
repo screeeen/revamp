@@ -1,17 +1,11 @@
 import React from 'react';
-
-
-
+import { SideMenuStyle } from './styled/styledLayout';
 
 export default function RightMenu({ children }) {
-  const rightMenuStyle = {
-    // border: '1px solid white',
-    flex: '1 1 20%'
-  }
 
   return (
-    <div style={rightMenuStyle}>
+    <SideMenuStyle>
       {children}
-    </div>
+    </SideMenuStyle>
   );
 }

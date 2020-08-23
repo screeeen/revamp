@@ -1,22 +1,11 @@
 import React from 'react';
-
-
-const centroStyle = {
-  // border: '1px solid red',
-  boxSizing: 'content-box',
-  textAlign: 'center',
-  // display:'flex',
-  // flexFlow: 'column nowrap',
-  // justifyContent: 'space-between',
-  // alignItems: 'start',
-  flex: '1 1 60%',
-}
+import { CentroStyle } from './styled/styledLayout';
 
 
 export default function MidMenu({ children }) {
   return (
-    <div style={centroStyle}>
+    <CentroStyle>
       {children}
-    </div>
+    </CentroStyle>
   );
 }
