@@ -6,7 +6,7 @@ import logo from "../images/sc_anim_glitch-2.gif";
 import { LogoWrapper, HeaderWrapper } from "./styled/styledLayout";
 import styled from "styled-components";
 
-export default ({ siteTitle }) => (
+export default () => (
   <HeaderWrapper>
     <li>
       <Link to="/">

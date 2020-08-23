@@ -25,14 +25,13 @@ export default function index() {
           <Gif gif={surfize3} still={surfize3} />
           <Gif gif={surfize4} still={surfize4} />
         </Grid>
-        {/* <img style={imageStyle} src={surfizePET} /> */}
         <IFrameStyle src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></IFrameStyle>
+        {/* <img style={imageStyle} src={surfizePET} /> */}
       </MidMenu>
       <RightMenu>
         <h3>SURFIZE</h3>
         <p> Surfize is an arcade unfinished lo-fi game inspired on the grindcore sounds. Beat your score by killing crazy creatures.
     Surfize simulates hypothetical battles that occurred in a near past and unknown to the media. Set in random locations, the battles follow archaic gameplay with a twist. Darkness is a palpable value in the game, its retro-palpable and mysterious. Ruled by simple and dark settings, this gameplay narrates hidden extraterrestrial stories in our planet.</p>
-
       </RightMenu >
     </Layout >
   )

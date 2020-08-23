@@ -12,14 +12,13 @@ import arena2 from '../../images/arena_2.png'
 import arena3 from '../../images/arena_3.png'
 import arena4 from '../../images/arena_4.png'
 import { ImageStyle, Grid } from '../../components/styled/styledLayout'
-import Picture from '../../components/Picture'
 
 
 export default function index() {
   return (
     <Layout url={'https://vimeo.com/128135792'}>
       <SEO title="Home" />
-      <LeftMenu>
+      <LeftMenu >
       </LeftMenu>
       <MidMenu >
         <Grid>
@@ -29,7 +28,7 @@ export default function index() {
           <ImageStyle src={arena3} />
           <ImageStyle src={arena4} />
           {/* <img style={imageStyle} src={awardsPic} /> */}
-          {/* <iframe style={iFrameStyle} src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></iframe> */}
+          <iframe src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></iframe>
         </Grid>
       </MidMenu>
       <RightMenu>

@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import arenaIcon from './../images/arena_icon.png'
-import surfizeIcon from './../images/surfize_icon.png'
-import { SideMenuStyle, ImageStyle } from './styled/styledLayout';
+import { SideMenuStyle, ImageStyle } from "./styled/styledLayout";
+import OtherGames from './OtherGamesWidget'
 
 export default function LeftMenu() {
 
@@ -22,6 +20,7 @@ export default function LeftMenu() {
         </label>
         <input type='submit' value='Submit'>Subscribe</input>
       </form> */}
+
       <form>
         <label>
           <p>Name:</p>
@@ -29,13 +28,13 @@ export default function LeftMenu() {
         </label>
         <input type="submit" value="Submit" />
       </form>
-      <h3>OTHER GAMES</h3>
-      <Link to="/arena">
+      <OtherGames />
+      {/* <Link to="/arena">
         <ImageStyle src={arenaIcon} />
       </Link>
       <Link to="/surfize">
         <ImageStyle src={surfizeIcon} />
-      </Link>
+      </Link> */}
     </SideMenuStyle>
   );
 }

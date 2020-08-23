@@ -29,8 +29,7 @@ const Layout = url => {
           // padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {console.log(url.url)}
+        <Header />
         {url.url && <VideoBox url={url} />}
         <ThreeColumns>{url.children}</ThreeColumns>
         <Footer />

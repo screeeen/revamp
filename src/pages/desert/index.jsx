@@ -5,17 +5,16 @@ import MidMenu from '../../components/MidMenu'
 import LeftMenu from '../../components/LeftMenu'
 import RightMenu from '../../components/RightMenu'
 import desertPic from '../../images/desert.png'
+import { ImageStyle, IFrameStyle } from '../../components/styled/styledLayout'
 export default function index() {
-  const imageStyle = {
-    width: '100%',
-  }
+
   return (
     <Layout url='https://vimeo.com/129374993'>
       <SEO title="Home" />
       <LeftMenu />
       <MidMenu>
-        <img style={imageStyle} src={desertPic} />
-        <iframe frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></iframe>
+        <ImageStyle src={desertPic} />
+        <IFrameStyle frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></IFrameStyle>
       </MidMenu>
       <RightMenu>
 
