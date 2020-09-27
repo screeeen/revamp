@@ -129,7 +129,7 @@ export const GameTitle = styled.div`
     // transform: scaleY(1.2);
     // transform: rotate(180deg);
   }
-  border: 1ps solid red;
+  // border: 1ps solid red;
 `;
 
 export const DownloadButton = styled.button`

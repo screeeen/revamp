@@ -2,7 +2,7 @@ import React from 'react'
 
 const white = {
   color:'white',
-  border:'1px solid yellow',
+  // border:'1px solid yellow',
   padding: '10px 10px'
 }
 

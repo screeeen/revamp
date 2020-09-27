@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `screen implosion`,
+    siteUrl:`https://www.screenimplosion.com`,
     description: `Screen Implosion is a games label and producer of classic arcade games with a contemporary twist.
     Screen Implosion is based in Berlin and founded in 2015`,
     author: `@screeeen`,
@@ -36,4 +37,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+    pathPrefix: "/github.com/screeeen/revamp",
+  
 };

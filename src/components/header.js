@@ -26,12 +26,12 @@ export default () => (
     <li>
       <Link to="/output">OUTPUT</Link>
     </li>
-    <li>
+    {/* <li>
       <Link to="/presskit">PRESSKIT</Link>
     </li>
     <li>
       <Link to="/devlog">DEVLOG</Link>
-    </li>
+    </li> */}
   </HeaderWrapper>
 );
 

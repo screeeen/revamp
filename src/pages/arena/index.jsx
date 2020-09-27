@@ -28,7 +28,6 @@ export default function index() {
           <ImageStyle src={arena3} />
           <ImageStyle src={arena4} />
           {/* <img style={imageStyle} src={awardsPic} /> */}
-          {/* <iframe src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></iframe> */}
         </Grid>
       </MidMenu>
       <RightMenu>
