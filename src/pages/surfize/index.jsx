@@ -9,7 +9,7 @@ import surfize2 from '../../images/surfize_2.gif'
 import surfize3 from '../../images/surfize_3.gif'
 import surfize4 from '../../images/surfize_4.gif'
 import surfizePET from '../../images/surfize_PET.png'
-import { Grid, IFrameStyle } from '../../components/styled/styledLayout'
+import { Grid, DownloadButton } from '../../components/styled/styledLayout'
 import Gif from '../../components/Gif'
 
 export default function index() {
@@ -25,8 +25,9 @@ export default function index() {
           <Gif gif={surfize3} still={surfize3} />
           <Gif gif={surfize4} still={surfize4} />
         </Grid>
-        <IFrameStyle src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></IFrameStyle>
+        {/* <IFrameStyle src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></IFrameStyle> */}
         {/* <img style={imageStyle} src={surfizePET} /> */}
+        <DownloadButton href="https://screenimplosion.itch.io/surfize">Download Surfize on itchio</DownloadButton>
       </MidMenu>
       <RightMenu>
         <h3>SURFIZE</h3>

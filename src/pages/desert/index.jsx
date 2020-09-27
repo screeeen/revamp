@@ -5,7 +5,7 @@ import MidMenu from '../../components/MidMenu'
 import LeftMenu from '../../components/LeftMenu'
 import RightMenu from '../../components/RightMenu'
 import desertPic from '../../images/desert.png'
-import { ImageStyle, IFrameStyle } from '../../components/styled/styledLayout'
+import { ImageStyle, IFrameStyle, DownloadButton } from '../../components/styled/styledLayout'
 export default function index() {
 
   return (
@@ -14,7 +14,7 @@ export default function index() {
       <LeftMenu />
       <MidMenu>
         <ImageStyle src={desertPic} />
-        <IFrameStyle frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></IFrameStyle>
+        <DownloadButton href="https://screenimplosion.itch.io/desert-peekaboo">Download Desert Peekaboo at itchio</DownloadButton>        {/* <IFrameStyle frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></IFrameStyle> */}
       </MidMenu>
       <RightMenu>
 

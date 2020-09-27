@@ -11,7 +11,7 @@ import pallozas_Pic from '../../images/pallozas.png'
 import pico_Pic from '../../images/pico.png'
 import vertical_Pic from '../../images/vertical.png'
 import awardsPic from '../../images/Awards_layer_vert.png'
-import { Grid, IFrameStyle, ImageStyle } from '../../components/styled/styledLayout'
+import { DownloadButton, Grid, IFrameStyle, ImageStyle } from '../../components/styled/styledLayout'
 
 
 export default function index() {
@@ -29,7 +29,8 @@ export default function index() {
           <ImageStyle src={pico_Pic} />
           <ImageStyle src={vertical_Pic} />
         </Grid>
-        <IFrameStyle src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></IFrameStyle>
+        {/* <IFrameStyle src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></IFrameStyle> */}
+        <DownloadButton src="https://screenimplosion.itch.io/downhill-chapter-one">Download Downhill* at itchio</DownloadButton>
       </MidMenu>
       <RightMenu>
         <h3>DOWNHILL* CHAPTER ONE</h3>
