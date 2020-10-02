@@ -28,7 +28,7 @@ export default function LeftMenu() {
         </label>
         <input type="submit" value="Submit" />
       </form>
-      <OtherGames />
+      {/* <OtherGames /> */}
       {/* <Link to="/arena">
         <ImageStyle src={arenaIcon} />
       </Link>

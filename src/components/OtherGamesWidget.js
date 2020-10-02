@@ -16,9 +16,9 @@ const links = [
 const OtherGames = () => (
   <>
     <h3>OTHER GAMES</h3>
-    <Link to="page.path">
+    <Link to="/">
             <ImageStyle src={links[3].src} />
-          </Link>
+      </Link>
     {/* {links.map(page => { */}
       {/* return (
         // document !== null &&

@@ -1,11 +1,17 @@
 import React from 'react';
 import { CentroStyle } from './styled/styledLayout';
+import cupMinute from "./../images/cupMinute.gif";
 
 
 export default function MidMenu({ children }) {
   return (
     <CentroStyle>
-      {children}
+      {!children ? 
+      <>
+      <img src={cupMinute}></img>
+      <h1>WELLCOME FRIENDS!</h1>
+      </>
+       : children}
     </CentroStyle>
   );
 }

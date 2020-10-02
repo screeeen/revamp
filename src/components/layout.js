@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "./Header";
@@ -29,7 +29,7 @@ const Layout = url => {
           // padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <Header />
+        <Header/>
         {url.url && <VideoBox url={url} />}
         <ThreeColumns>{url.children}</ThreeColumns>
         <Footer />

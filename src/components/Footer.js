@@ -7,6 +7,8 @@ const white = {
 }
 
 export default function Footer() {
+  console.log('soy footer');
+  
   return (
 <footer style={white}>
           ©

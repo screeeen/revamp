@@ -15,19 +15,26 @@ export const HeaderWrapper = styled.ul`
   align-items: flex-end;
 
   a {
-    color: white;
+    color: ${(props) => (props.selected === 'selected') ? 'yellow' : 'white' };
     text-decoration: none;
     font-family: "HelveticaNeue-Medium";
     font-size: 0.8em;
     font-weight: 100;
     padding: 0 0.4em;
     font-weight: thin;
+    
 
     &:hover {
       color: yellow;
       transform: scaleY(10);
       transform: rotate(180deg);
     }
+
+    &.selected {
+      color: red;
+    }
+
+
   }
 `;
 export const ThreeColumns = styled.div`
@@ -71,11 +78,16 @@ export const CentroStyle = styled.div`
   overflow: auto;
   flex: 1 1 60%;
   padding: 0.5em 0.5em;
+
+  & img {
+    width:100%
+  }
 `;
 
 export const SideMenuStyle = styled.div`
   // border: 0px solid white,
   // min-width: 20%;
+  color: #dedede;
   flex: 1 1 20%;
   padding: 0.5em 0.5em;
 `;

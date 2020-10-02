@@ -37,6 +37,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-    pathPrefix: "/github.com/screeeen/revamp",
+    pathPrefix: "/revamp/",
   
 };
