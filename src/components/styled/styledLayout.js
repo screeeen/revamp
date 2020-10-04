@@ -14,8 +14,10 @@ export const HeaderWrapper = styled.ul`
   justify-content: space-between;
   align-items: flex-end;
 
+
+
   a {
-    color: ${(props) => (props.selected === 'selected') ? 'yellow' : 'white' };
+    color:  darkgrey ;
     text-decoration: none;
     font-family: "HelveticaNeue-Medium";
     font-size: 0.8em;
@@ -25,14 +27,13 @@ export const HeaderWrapper = styled.ul`
     
 
     &:hover {
-      color: yellow;
-      transform: scaleY(10);
-      transform: rotate(180deg);
+      color: lightgrey;
     }
-
+    
     &.selected {
-      color: red;
+      color: white;
     }
+  }
 
 
   }

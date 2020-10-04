@@ -5,9 +5,9 @@ import MidMenu from '../../components/MidMenu'
 
 export default function index() {
   return (
-    <Layout>
+    <>
     <SEO title="Home" />
       <MidMenu />
-  </Layout>
+  </>
   )
 }

@@ -15,8 +15,9 @@ import { DownloadButton, Grid, IFrameStyle, ImageStyle } from '../../components/
 
 
 export default function index() {
+  const url='https://vimeo.com/152825032';
   return (
-    <Layout url={'https://vimeo.com/152825032'}>
+    < >
       <SEO title="Downhill Chapter One" />
       <LeftMenu />
       <MidMenu >
@@ -58,6 +59,6 @@ export default function index() {
           <li>Official Selection AZPlay Bilbao Spain 2015</li>
         </ul>
       </RightMenu>
-    </Layout>
+    </>
   )
 }

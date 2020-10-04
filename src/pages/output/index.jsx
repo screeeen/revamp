@@ -14,7 +14,7 @@ const importAll = (r) => {
 export default function index() {
   const images = importAll(require.context('../../images_output', false, /\.(png|jpg|svg)$/));
   return (
-    <Layout>
+    <>
       <SEO title="Output Documentary Manifesto" />
       <LeftMenu />
       <MidMenu >
@@ -76,6 +76,6 @@ export default function index() {
         <p>A manifesto about computer arts and games made by Miguel Alva with the help of Diego Delgado, Sara Besnard and music of Volta x Suite
       Filmed during A Maze./Berlin April from 23rd till 28th 2017 To be viewed by April 2067.</p>
       </RightMenu>
-    </Layout >
+    </ >
     );
 }

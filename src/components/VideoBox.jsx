@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 
 // Render a YouTube video player
-export default ({ url }) => {
+export default (url) => {
   console.log(url.url)
   return (
     <ReactPlayer width={800} height={480}

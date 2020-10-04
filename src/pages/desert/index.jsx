@@ -7,9 +7,9 @@ import RightMenu from '../../components/RightMenu'
 import desertPic from '../../images/desert.png'
 import { ImageStyle, IFrameStyle, DownloadButton } from '../../components/styled/styledLayout'
 export default function index() {
-
+const url='https://vimeo.com/129374993';
   return (
-    <Layout url='https://vimeo.com/129374993'>
+    <>
       <SEO title="Home" />
       <LeftMenu />
       <MidMenu>
@@ -22,6 +22,6 @@ export default function index() {
         <h3>DESERT PEEKABOO VR (PC/MAC)</h3>
         <p>A non-game for VR Glasses made at Shayla Games with  music made by John Brown from BoneLoaf.</p>
       </RightMenu>
-    </Layout>
+    </>
   )
 }
