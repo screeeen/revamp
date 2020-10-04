@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import VideoBox from '../../components/VideoBox'
 import SEO from '../../components/seo'
 import MidMenu from '../../components/MidMenu'
 import LeftMenu from '../../components/LeftMenu'
@@ -21,6 +21,8 @@ export default function index() {
       <SEO title="Downhill Chapter One" />
       <LeftMenu />
       <MidMenu >
+      <VideoBox url={url} />
+
         <ImageStyle src={awardsPic} />
         <Grid>
           <ImageStyle src={monumentPic} />

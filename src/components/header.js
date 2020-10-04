@@ -16,9 +16,7 @@ import { LogoWrapper, HeaderWrapper } from "./styled/styledLayout";
 
 export default () => {
   const initialState = ''
-  const [selected, setSelected] = useState(initialState) // this shit is not workin
-
-  console.log('hola',selected);
+  const [selected, setSelected] = useState(initialState);
 
   return(  
   <HeaderWrapper>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import VideoBox from '../../components/VideoBox'
 import SEO from '../../components/seo'
 import MidMenu from '../../components/MidMenu'
 import RightMenu from '../../components/RightMenu'
@@ -19,6 +19,7 @@ const url='https://vimeo.com/99716958';
       <SEO title="Home" />
       <LeftMenu />
       <MidMenu>
+        <VideoBox url={url}/>
         <Grid>
           <ImageStyle src={surfize1} alt =''/>
           <ImageStyle src={surfize2} alt =''/>

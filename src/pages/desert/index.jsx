@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import VideoBox from '../../components/VideoBox'
 import SEO from '../../components/seo'
 import MidMenu from '../../components/MidMenu'
 import LeftMenu from '../../components/LeftMenu'
@@ -13,6 +13,8 @@ const url='https://vimeo.com/129374993';
       <SEO title="Home" />
       <LeftMenu />
       <MidMenu>
+      <VideoBox url={url} />
+
         <ImageStyle src={desertPic} />
         <DownloadButton href="https://screenimplosion.itch.io/desert-peekaboo">Download Desert Peekaboo at itchio</DownloadButton>        {/* <IFrameStyle frameBorder="0" src="https://itch.io/embed/26785?border_width=0&amp;bg_color=000000" width="100%" height="165"></IFrameStyle> */}
       </MidMenu>

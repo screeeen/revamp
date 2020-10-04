@@ -23,7 +23,7 @@ export default function index() {
       <LeftMenu >
       </LeftMenu>
       <MidMenu >
-      {/* <VideoBox url={url} /> */}
+      <VideoBox url={url} />
         <Grid>
           <ImageStyle src={arenaLogo} />
           <ImageStyle src={arena1} />
