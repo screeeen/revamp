@@ -22,7 +22,6 @@ export default function index() {
       <LeftMenu />
       <MidMenu >
       <VideoBox url={url} />
-
         <ImageStyle src={awardsPic} />
         <Grid>
           <ImageStyle src={monumentPic} />

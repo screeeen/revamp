@@ -46,14 +46,14 @@ export const ThreeColumns = styled.div`
   // border: 1px solid #ff00ff;
 `;
 
-export const LayoutWrapper = styled.div`
-  // margin: 0;
-  // maxWidth: 800px;
-  // padding: 0;
-  // overflow: hidden;
-  // width: '5px';
-  // background-color: red;
-`;
+// export const LayoutWrapper = styled.div`
+//   // margin: 0;
+//   // maxWidth: 800px;
+//   // padding: 0;
+//   // overflow: hidden;
+//   // width: '5px';
+//   // background-color: red;
+// `;
 
 export const IFrameStyle = styled.div`
   width: 100%;

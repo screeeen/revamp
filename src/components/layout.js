@@ -8,7 +8,7 @@ import VideoBox from "./VideoBox";
 import Footer from "./Footer";
 import { ThreeColumns } from "./styled/styledLayout";
 
-const Layout = () => {
+const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,14 +25,14 @@ const Layout = () => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1200,
+          maxWidth: 900,
           // border: '1px solid yellow',
-          // padding: `0 1.0875rem 1.45rem`,
+          padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <Header/>
-        <VideoBox url={`https://vimeo.com/99716958`} />
-        <ThreeColumns>{url.children}</ThreeColumns>
+        {/* <VideoBox url={`https://vimeo.com/99716958`} /> */}
+        <ThreeColumns>{children}</ThreeColumns>
         <Footer />
       </div>
     </>
