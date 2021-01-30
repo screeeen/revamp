@@ -1,11 +1,11 @@
 import React from 'react';
-import { SideMenuStyle, ImageStyle } from "./styled/styledLayout";
+import { SideLeftMenuStyle, ImageStyle } from "./styled/styledLayout";
 import OtherGames from './OtherGamesWidget'
 
 export default function LeftMenu() {
 
   return (
-    <SideMenuStyle>
+    <SideLeftMenuStyle>
       <h3>SCREEN IMPLOSION</h3>
       <p>
         Screen Implosion is a games label and producer of classic arcade games
@@ -35,6 +35,6 @@ export default function LeftMenu() {
       <Link to="/surfize">
         <ImageStyle src={surfizeIcon} />
       </Link> */}
-    </SideMenuStyle>
+    </SideLeftMenuStyle>
   );
 }

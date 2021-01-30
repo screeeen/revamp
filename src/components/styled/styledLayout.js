@@ -2,19 +2,42 @@
 import styled from "styled-components";
 // import { Link } from "gatsby";
 
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
+export const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`
+};
+
+
+
 export const LogoWrapper = styled.img`
   padding: 0;
   margin: 0 0 0 -20px;
 `;
 export const HeaderWrapper = styled.ul`
+
   list-style-type: none;
   padding: 1em 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
-
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   a {
     color:  darkgrey ;
@@ -35,15 +58,31 @@ export const HeaderWrapper = styled.ul`
     }
   }
 
-
+  @media ${device.tablet} { 
+    /* max-width: 800px; */
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   }
 `;
+
+
 export const ThreeColumns = styled.div`
+
   display: flex;
-  flexflow: row nowrap;
+  flex-flow: column;
   flex: 1 1 1;
   color: white;
+  
+  @media ${device.tablet} { 
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 1;
+    color: white;
   // border: 1px solid #ff00ff;
+  }
+
 `;
 
 // export const LayoutWrapper = styled.div`
@@ -86,11 +125,32 @@ export const CentroStyle = styled.div`
 `;
 
 export const SideMenuStyle = styled.div`
-  // border: 0px solid white,
   // min-width: 20%;
   color: #dedede;
   flex: 1 1 20%;
   padding: 0.5em 0.5em;
+
+  order: 2;
+`;
+
+export const SideLeftMenuStyle = styled.div`
+/* border: 1px solid whitesmoke; */
+border-width: 1px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      whitesmoke, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+  // min-width: 20%;
+  color: #dedede;
+  flex: 1 1 20%;
+  padding: 0.5em 0.5em;
+  order: 4;
+  @media ${device.tablet} { 
+    order: 4;
+  }
 `;
 
 export const GridWithPics = styled.div`
