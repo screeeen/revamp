@@ -1,11 +1,38 @@
-// import React from "react";
 import styled from "styled-components";
-// import { Link } from "gatsby";
+
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+export const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+
+export const Body = styled.div`
+  margin: 0 auto;
+  max-width: 900px;
+  // border: 1px solid yellow;
+  padding: 2rem 1.0875rem 1.45rem;
+`;
 
 export const LogoWrapper = styled.img`
   padding: 0;
   margin: 0 0 0 -20px;
 `;
+
 export const HeaderWrapper = styled.ul`
   list-style-type: none;
   padding: 1em 0;
@@ -14,28 +41,29 @@ export const HeaderWrapper = styled.ul`
   justify-content: space-between;
   align-items: flex-end;
 
-
-
-  a {
-    color:  darkgrey ;
-    text-decoration: none;
-    font-family: "HelveticaNeue-Medium";
-    font-size: 0.8em;
-    font-weight: 100;
-    padding: 0 0.4em;
-    font-weight: thin;
-    
-
-    &:hover {
-      color: lightgrey;
+  @media ${device.mobileL} {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
-    
-    &.selected {
-      color: white;
+
+    a {
+      color: darkgrey;
+      text-decoration: none;
+      font-family: "HelveticaNeue-Medium";
+      font-size: 0.8em;
+      font-weight: 100;
+      padding: 0 0.4em;
+      font-weight: thin;
+
+      &:hover {
+        color: lightgrey;
+      }
+
+      &.selected {
+        color: white;
+      }
     }
-  }
-
-
   }
 `;
 export const ThreeColumns = styled.div`
@@ -44,6 +72,12 @@ export const ThreeColumns = styled.div`
   flex: 1 1 1;
   color: white;
   // border: 1px solid #ff00ff;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 export const IFrameStyle = styled.div`
@@ -72,7 +106,7 @@ export const CentroStyle = styled.div`
   padding: 0.5em 0.5em;
 
   & img {
-    width:100%
+    width: 100%;
   }
 `;
 
@@ -123,9 +157,9 @@ export const GameTitle = styled.div`
   // font-size: 0.8em;
   font-weight: 100;
   padding: 0 0.4em;
-  font-style:italic;
+  font-style: italic;
 
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 200;
 
   &:hover {
@@ -148,6 +182,10 @@ export const DownloadButton = styled.button`
   appearance: none;
   cursor: pointer;
 }`;
+
+export const FooterStyle = styled.div`
+  max-width: 300px;
+`;
 
 // export const LinkStyled = styled.Link`
 //   // width: 100%;

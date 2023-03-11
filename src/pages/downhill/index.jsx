@@ -1,27 +1,30 @@
-import React from 'react'
-import VideoBox from '../../components/VideoBox'
-import SEO from '../../components/seo'
-import MidMenu from '../../components/MidMenu'
-import LeftMenu from '../../components/LeftMenu'
-import RightMenu from '../../components/RightMenu'
-import monumentPic from '../../images/monument.png'
-import kao_Pic from '../../images/kao_.png'
-import palc_Pic from '../../images/palc.png'
-import pallozas_Pic from '../../images/pallozas.png'
-import pico_Pic from '../../images/pico.png'
-import vertical_Pic from '../../images/vertical.png'
-import awardsPic from '../../images/Awards_layer_vert.png'
-import { DownloadButton, Grid, IFrameStyle, ImageStyle } from '../../components/styled/styledLayout'
-
+import React from "react";
+import VideoBox from "../../components/VideoBox";
+import SEO from "../../components/seo";
+import MidMenu from "../../components/MidMenu";
+import LeftMenu from "../../components/LeftMenu";
+import RightMenu from "../../components/RightMenu";
+import monumentPic from "../../images/monument.png";
+import kao_Pic from "../../images/kao_.png";
+import palc_Pic from "../../images/palc.png";
+import pallozas_Pic from "../../images/pallozas.png";
+import pico_Pic from "../../images/pico.png";
+import vertical_Pic from "../../images/vertical.png";
+import awardsPic from "../../images/Awards_layer_vert.png";
+import {
+  DownloadButton,
+  Grid,
+  IFrameStyle,
+  ImageStyle,
+} from "../../components/styled/styledLayout";
 
 export default function index() {
-  const url='https://vimeo.com/152825032';
+  const url = "https://vimeo.com/152825032";
   return (
-    < >
+    <>
       <SEO title="Downhill Chapter One" />
-      <LeftMenu />
-      <MidMenu >
-      <VideoBox url={url} />
+      <MidMenu>
+        <VideoBox url={url} />
         <ImageStyle src={awardsPic} />
         <Grid>
           <ImageStyle src={monumentPic} />
@@ -32,7 +35,9 @@ export default function index() {
           <ImageStyle src={vertical_Pic} />
         </Grid>
         {/* <IFrameStyle src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></IFrameStyle> */}
-        <DownloadButton src="https://screenimplosion.itch.io/downhill-chapter-one">Download Downhill* at itchio</DownloadButton>
+        <DownloadButton src="https://screenimplosion.itch.io/downhill-chapter-one">
+          Download Downhill* at itchio
+        </DownloadButton>
       </MidMenu>
       <RightMenu>
         <h3>DOWNHILL* CHAPTER ONE</h3>
@@ -61,5 +66,5 @@ export default function index() {
         </ul>
       </RightMenu>
     </>
-  )
+  );
 }
