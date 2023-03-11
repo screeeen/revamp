@@ -6,10 +6,9 @@ import LeftMenu from "../components/LeftMenu";
 
 const IndexPage = () => (
   <>
-      <SEO title="Home" />
-      <LeftMenu />
-      <MidMenu />
-      <RightMenu />
+    <SEO title="Home" />
+    <MidMenu />
+    <RightMenu />
   </>
 );
 
