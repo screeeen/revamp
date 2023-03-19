@@ -13,6 +13,7 @@ import {
   Grid,
   DownloadButton,
   ImageStyle,
+  LinkBox,
 } from "../../components/styled/styledLayout";
 // import Gif from '../../components/Gif'
 
@@ -29,11 +30,9 @@ export default function index() {
           <ImageStyle src={surfize3} alt="" />
           <ImageStyle src={surfize4} alt="" />
         </Grid>
-        {/* <IFrameStyle src="https://itch.io/embed/432?border_width=0&amp;bg_color=000000&amp;link_color=ffffff" ></IFrameStyle> */}
-        {/* <img style={imageStyle} src={surfizePET} /> */}
-        <DownloadButton href="https://screenimplosion.itch.io/surfize">
-          Download Surfize on itchio
-        </DownloadButton>
+        <LinkBox>
+          <DownloadButton href="../../surfize_.zip">Download</DownloadButton>
+        </LinkBox>
       </MidMenu>
       <RightMenu>
         <h3>SURFIZE</h3>

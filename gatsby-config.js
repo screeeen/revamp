@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `screen implosion`,
-    siteUrl:`https://www.screenimplosion.com`,
+    siteUrl: `https://www.screenimplosion.com`,
     description: `Screen Implosion is a games label and producer of classic arcade games with a contemporary twist.
-    Screen Implosion is based in Berlin and founded in 2015`,
+    Screen Implosion was founded in 2015 in Berlin.`,
     author: `@screeeen`,
   },
   plugins: [
@@ -33,14 +33,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-catch-links`,
     {
-    resolve: `gatsby-plugin-layout`,
-    options: {
-      component: require.resolve(`./src/components/layout`),
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+      // this (optional) plugin enables Progressive Web App + Offline functionality
+      // To learn more, visit: https://gatsby.dev/offline
+      // `gatsby-plugin-offline`,
     },
   ],
-    pathPrefix: "/revamp/",
+  pathPrefix: "/revamp/",
 };

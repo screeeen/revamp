@@ -13,8 +13,8 @@ export default function Footer() {
       <h3>SCREEN IMPLOSION</h3>
       <p>
         Screen Implosion is a games label and producer of classic arcade games
-        with a contemporary twist. Screen Implosion is based in Berlin and
-        founded in 2015
+        with a contemporary twist. Screen Implosion was founded in 2015 in
+        Berlin.
       </p>
       <form>
         <label>

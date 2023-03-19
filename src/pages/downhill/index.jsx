@@ -14,7 +14,7 @@ import awardsPic from "../../images/Awards_layer_vert.png";
 import {
   DownloadButton,
   Grid,
-  IFrameStyle,
+  LinkBox,
   ImageStyle,
 } from "../../components/styled/styledLayout";
 
@@ -34,10 +34,14 @@ export default function index() {
           <ImageStyle src={pico_Pic} />
           <ImageStyle src={vertical_Pic} />
         </Grid>
-        {/* <IFrameStyle src="https://itch.io/embed/72601?border_width=0&amp;bg_color=000000" ></IFrameStyle> */}
-        <DownloadButton src="https://screenimplosion.itch.io/downhill-chapter-one">
-          Download Downhill* at itchio
-        </DownloadButton>
+        <LinkBox>
+          <DownloadButton href="../../Downhill_Chapter_One_osx.zip">
+            Download Downhill* Chapter One for MAC
+          </DownloadButton>
+          <DownloadButton href="../../Downhill_Soundtrack_EP.zip">
+            Download Downhill* Chapter One Soundtrack
+          </DownloadButton>
+        </LinkBox>
       </MidMenu>
       <RightMenu>
         <h3>DOWNHILL* CHAPTER ONE</h3>

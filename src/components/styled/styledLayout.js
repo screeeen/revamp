@@ -91,6 +91,7 @@ export const IFrameStyle = styled.div`
 export const ImageStyle = styled.img`
   // min-width: 10%;
   max-width: 100%;
+  
 }`;
 
 export const Grid = styled.div`
@@ -101,7 +102,7 @@ export const CentroStyle = styled.div`
   // border: 1px solid white;
   // box-sizing: content-box;
   text-align: center;
-  overflow: auto;
+  overflow: visible;
   flex: 1 1 60%;
   padding: 0.5em 0.5em;
 
@@ -170,18 +171,30 @@ export const GameTitle = styled.div`
   // border: 1ps solid red;
 `;
 
-export const DownloadButton = styled.button`
+export const DownloadButton = styled.a`
   padding: 12px 24px;
-  margin: 24px;
+  margin: 20px 24px;
   color: white;
   font-size: 14px;
   font-weight: 700;
   background-color: grey;
+  text-decoration: none;
   border: 0px;
   border-radius: 3px;
   appearance: none;
   cursor: pointer;
 }`;
+
+export const LinkBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+// export const Thing = styled.div`
+//   background-color: yellow;
+// `;
 
 export const FooterStyle = styled.div`
   max-width: 300px;
