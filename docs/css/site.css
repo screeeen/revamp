@@ -220,6 +220,12 @@ p {
 /* Grid */
 .grid { column-count: 2; }
 
+/* Los atributos width/height del HTML le dan al navegador la proporcion
+   de cada imagen antes de descargarla, y asi reserva el hueco y la pagina
+   no da el salto al cargar. Sin este `height: auto` esa altura declarada
+   se aplicaria tal cual y deformaria la imagen. */
+img { height: auto; }
+
 /* ImageStyle */
 .img { max-width: 100%; }
 
