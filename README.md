@@ -1,7 +1,11 @@
-# screen implosion — versión HTML
+# screen implosion
 
-Reescritura del sitio de Gatsby (`../src`) en HTML plano. Sin build, sin
-dependencias, sin Node. Lo que hay en esta carpeta es lo que se sirve.
+Sitio estático. Todo lo que se publica está en `docs/`.
+
+Reescritura del antiguo sitio de Gatsby en HTML plano: sin build, sin
+dependencias y sin Node. Lo que hay en `docs/` es exactamente lo que se
+sirve. La maquinaria de Gatsby se retiró del repositorio; su último
+estado sigue disponible en la rama `gh-pages` y en el historial.
 
 ## Estructura
 
