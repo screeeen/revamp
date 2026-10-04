@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OVNI</title>
+    <meta name="description" content="OVNI" />
+    <meta property="og:title" content="OVNI" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <style>
+      /* Los colores del propio juego: el fondo es su color 0 de paleta y el
+     violeta es el de los muros del laberinto. */
+      :root {
+        --bg: #000000;
+        --ink: #987dfa;
+        --fg: #ffffff;
+        --dim: #8a8aa8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 16px 64px;
+      }
+
+      header {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 9vw, 56px);
+        letter-spacing: 0.18em;
+        font-weight: 700;
+      }
+
+      .sub {
+        margin: 8px 0 0;
+        color: var(--ink);
+        letter-spacing: 0.14em;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      /* 320x224 es la resolución real de la consola: 4:3 al presentarla. */
+      #game {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        background: #000;
+      }
+
+      .note {
+        margin: 20px 0 0;
+        color: var(--dim);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      h2 {
+        margin: 40px 0 12px;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+
+      td {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(152, 125, 250, 0.18);
+        vertical-align: top;
+      }
+
+      td:first-child {
+        width: 38%;
+        color: var(--ink);
+        white-space: nowrap;
+        padding-right: 16px;
+      }
+
+      footer {
+        margin-top: 48px;
+        color: var(--dim);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>eres aparvao</h1>
+      </header>
+
+      <div id="game"></div>
+
+      <h2>Controles</h2>
+      <table>
+        <!-- <tr>
+      <td>Cruceta</td>
+      <td>Dirige la nave. Un toque y se desliza hasta chocar: sólo se cambia de rumbo desde parado.</td>
+    </tr> -->
+        <tr>
+          <td>S</td>
+          <td>
+            Mapa de la zona. Hasta encontrar la letra A de cada planeta no hay
+            señal, sólo ruido.
+          </td>
+        </tr>
+        <tr>
+          <td>X (mantener)</td>
+          <td>Traza la ruta hasta la planta o la letra más cercana.</td>
+        </tr>
+        <tr>
+          <td>Z</td>
+          <td>En el menú, sonido on/off.</td>
+        </tr>
+        <tr>
+          <td>ENTERN</td>
+          <td>En el mapa, revela todas las habitaciones.</td>
+        </tr>
+      </table>
+    </main>
+
+    <script>
+      // EmulatorJS se configura con globales antes de cargar su loader.
+      EJS_player = "#game";
+      EJS_core = "segaMD";
+      EJS_gameUrl = "ovni.bin";
+      EJS_gameName = "OVNI";
+      EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+      EJS_color = "#987dfa";
+      EJS_startOnLoaded = false;
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+  </body>
+</html>
