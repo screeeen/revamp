@@ -1,10 +1,4 @@
-/* ==========================================================================
-   screen implosion — hoja de estilos única
-   Transcrita del CSS que styled-components generaba en el build de Gatsby
-   (src/theme/global-style.js + src/components/styled/styledLayout.js).
-   Los nombres de clase sustituyen a los hashes del tipo .erEGmo; las
-   declaraciones son las mismas, por lo que el resultado visual es idéntico.
-   ========================================================================== */
+/* screen implosion — hoja de estilos única */
 
 /* --- reset (styled-reset) ------------------------------------------------ */
 html, body, div, span, applet, object, iframe,
@@ -39,13 +33,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 *, *:before, *:after { box-sizing: border-box; }
 
-/* --- tipografías ---------------------------------------------------------
-   Todo el sitio en Helvetica Neue. Se declara una sola familia,
-   'HelveticaNeue', con los tres cortes que hay en fonts/ mapeados a peso,
-   de modo que los `font-weight` que ya usaba el diseño eligen el corte:
-   100/200 -> Thin, 400 -> Roman, 500/700 -> Medium.
-   La pila de reserva usa la Helvetica Neue del sistema, que en macOS
-   existe, antes de caer en Helvetica o Arial.                             */
+/* --- tipografías: 100/200 Thin, 400 Roman, 500/700 Medium --- */
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('../fonts/HelveticaNeue-Thin.otf') format('opentype');
@@ -91,8 +79,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: var(--font);
-  /* el original traía `color: '#1a202c'` entre comillas, que es CSS
-     inválido y el navegador descartaba; se omite para no cambiar nada */
 }
 
 body {
@@ -123,13 +109,7 @@ p {
 
 /* Body */
 .body-wrap {
-  /* `width: 100%` no estaba en el original y hace falta aqui: en Gatsby
-     este div colgaba de dos divs normales (#___gatsby y
-     #gatsby-focus-wrapper) y por tanto se estiraba al ancho disponible.
-     Al colgar ahora directamente de `body`, que es flex, el `margin: 0
-     auto` anularia el stretch y la caja se encogeria al ancho de su
-     contenido: la home se veria mas estrecha que el resto y la nav
-     juntaria los enlaces. Con esto la geometria es la de antes. */
+  /* sin width el margin auto anula el stretch de body */
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
@@ -165,8 +145,6 @@ p {
   text-decoration: none;
   font-family: var(--font);
   font-size: 0.8em;
-  /* el original iba en 100 (Thin); 400 es el corte Roman, un punto mas de
-     cuerpo sin llegar al Medium de los titulos */
   font-weight: 400;
   padding: 0 0.4em;
 }
@@ -174,8 +152,7 @@ p {
 .nav a:hover { color: lightgrey; }
 .nav a.selected { color: white; }
 
-/* ThreeColumns — en el original `flexflow` y `flex: 1 1 1` eran inválidos
-   y el navegador los descartaba, así que sólo quedaban estas dos reglas */
+/* ThreeColumns */
 .three-columns {
   display: flex;
   color: white;
@@ -197,15 +174,17 @@ p {
   padding: 0.5em 0.5em;
 }
 
-/* Esta regla es la que manda sobre el ancho de todas las imágenes de la
-   columna central: es más específica que .pic o .img, igual que antes */
+/* más específica que .pic y .img */
 .centro img { width: 100%; }
 
-/* SideMenuStyle */
+/* SideMenuStyle — un bloque arriba y otro abajo */
 .side-menu {
   color: #dedede;
   flex: 1 1 20%;
   padding: 0.5em 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* FooterStyle — el color y el padding venían de un style inline */
@@ -213,6 +192,7 @@ p {
   max-width: 300px;
   color: white;
   padding: 10px 10px;
+  margin-top: auto;
 }
 
 /* --- piezas de contenido ------------------------------------------------- */
@@ -220,10 +200,7 @@ p {
 /* Grid */
 .grid { column-count: 2; }
 
-/* Los atributos width/height del HTML le dan al navegador la proporcion
-   de cada imagen antes de descargarla, y asi reserva el hueco y la pagina
-   no da el salto al cargar. Sin este `height: auto` esa altura declarada
-   se aplicaria tal cual y deformaria la imagen. */
+/* mantiene la proporción de los width/height del HTML */
 img { height: auto; }
 
 /* ImageStyle */
@@ -232,21 +209,16 @@ img { height: auto; }
 /* Pic */
 .pic { width: 49%; padding: 0 6px; }
 
-/* GridWithPics — llevaba grid-template-* sin `display: grid`, así que no
-   tenía ningún efecto; se deja como contenedor sin estilo, como estaba */
+/* GridWithPics */
 .grid-with-pics { }
 
 /* GamesList */
 .games-list {
   display: grid;
-  /* la columna central centra todo su contenido; la lista entera de
-     /output/ se lee alineada a la izquierda: encabezado, entradas,
-     separadores y las lineas de contacto */
   text-align: left;
 }
 
-/* encabezado de la lista de /output/: el texto iba suelto dentro del grid,
-   ahora va envuelto para poder separarlo de la primera entrada */
+/* encabezado de la lista de /output/ */
 .list-heading { padding-bottom: 1em; }
 
 /* SimpleLink */
@@ -261,8 +233,7 @@ img { height: auto; }
 
 .simple-link:hover { color: yellow; }
 
-/* el enlace suelto dentro de una frase (el "screenimplosion" del pie de
-   /output/) va en linea, no como bloque: asi la direccion se lee seguida */
+/* enlace en línea dentro de una frase */
 .simple-link.inline { display: inline; padding: 0; }
 
 /* GameTitle */
@@ -300,9 +271,7 @@ img { height: auto; }
   flex-direction: column;
 }
 
-/* --- reproductor de vídeo -----------------------------------------------
-   react-player renderizaba un contenedor de 100% x 360px con el iframe de
-   Vimeo dentro; se reproduce con esas mismas medidas                      */
+/* --- reproductor de vídeo --- */
 .player-wrapper {
   width: 100%;
   height: 360px;
