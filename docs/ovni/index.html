@@ -4,46 +4,63 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OVNI — juego de laberintos para Sega Mega Drive</title>
-    <meta name="description" content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada." />
+    <meta
+      name="description"
+      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
+    />
     <link rel="canonical" href="https://screenimplosion.com/ovni/" />
 
     <meta property="og:site_name" content="Screen Implosion" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="OVNI — juego de laberintos para Sega Mega Drive" />
-    <meta property="og:description" content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada." />
+    <meta
+      property="og:title"
+      content="OVNI — juego de laberintos para Sega Mega Drive"
+    />
+    <meta
+      property="og:description"
+      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
+    />
     <meta property="og:url" content="https://screenimplosion.com/ovni/" />
-    <meta property="og:image" content="https://screenimplosion.com/images/og-card.png" />
+    <meta
+      property="og:image"
+      content="https://screenimplosion.com/images/og-card.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Screen Implosion" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@screeeen" />
-    <meta name="twitter:title" content="OVNI — juego de laberintos para Sega Mega Drive" />
-    <meta name="twitter:description" content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada." />
-    <meta name="twitter:image" content="https://screenimplosion.com/images/og-card.png" />
+    <meta
+      name="twitter:title"
+      content="OVNI — juego de laberintos para Sega Mega Drive"
+    />
+    <meta
+      name="twitter:description"
+      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
+    />
+    <meta
+      name="twitter:image"
+      content="https://screenimplosion.com/images/og-card.png"
+    />
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "OVNI",
-  "description": "OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada.",
-  "url": "https://screenimplosion.com/ovni/",
-  "inLanguage": "es",
-  "gamePlatform": [
-    "Sega Mega Drive",
-    "Sega Genesis",
-    "Web browser"
-  ],
-  "image": "https://screenimplosion.com/images/og-card.png",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/"
-  }
-}
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "OVNI",
+        "description": "OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada.",
+        "url": "https://screenimplosion.com/ovni/",
+        "inLanguage": "es",
+        "gamePlatform": ["Sega Mega Drive", "Sega Genesis", "Web browser"],
+        "image": "https://screenimplosion.com/images/og-card.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Screen Implosion",
+          "url": "https://screenimplosion.com/"
+        }
+      }
     </script>
     <style>
       /* Los colores del propio juego: el fondo es su color 0 de paleta y el
@@ -70,9 +87,58 @@
       }
 
       main {
-        max-width: 760px;
+        max-width: 1120px;
         margin: 0 auto;
         padding: 32px 16px 64px;
+      }
+
+      /* Emulador a la izquierda, controles a la derecha. Por debajo de
+         900px se apilan: el mando no compite con la pantalla en movil. */
+      .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 28px;
+        align-items: start;
+      }
+
+      @media (max-width: 900px) {
+        .stage {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .pad svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .legend {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .legend li {
+        display: flex;
+        gap: 10px;
+        padding: 7px 0;
+        border-bottom: 1px solid rgba(152, 125, 250, 0.18);
+      }
+
+      /* La tecla, dibujada como tecla. Ancho fijo para que la columna de
+         descripciones quede alineada. */
+      .key {
+        flex: 0 0 58px;
+        color: var(--ink);
+        border: 1px solid rgba(152, 125, 250, 0.5);
+        border-radius: 4px;
+        padding: 1px 0;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.06em;
       }
 
       header {
@@ -154,34 +220,77 @@
         <h1>eres aparvao</h1>
       </header>
 
-      <div id="game"></div>
+      <div class="stage">
+        <div id="game"></div>
 
-      <h2>Controles</h2>
-      <table>
-        <!-- <tr>
-      <td>Cruceta</td>
-      <td>Dirige la nave. Un toque y se desliza hasta chocar: sólo se cambia de rumbo desde parado.</td>
-    </tr> -->
-        <tr>
-          <td>S</td>
-          <td>
-            Mapa de la zona. Hasta encontrar la letra A de cada planeta no hay
-            señal, sólo ruido.
-          </td>
-        </tr>
-        <tr>
-          <td>X (mantener)</td>
-          <td>Traza la ruta hasta la planta o la letra más cercana.</td>
-        </tr>
-        <tr>
-          <td>Z</td>
-          <td>En el menú, sonido on/off.</td>
-        </tr>
-        <tr>
-          <td>ENTERN</td>
-          <td>En el mapa, revela todas las habitaciones.</td>
-        </tr>
-      </table>
+        <aside class="pad">
+          <h2 style="margin-top: 0">Controles</h2>
+          <svg viewBox="0 0 300 170" role="img" aria-labelledby="padT padD">
+            <title id="padT">
+              Mando con las teclas del teclado sobre cada boton
+            </title>
+            <desc id="padD">move</desc>
+            <g fill="none" stroke="#987dfa" stroke-width="2">
+              <rect x="6" y="26" width="288" height="116" rx="50" />
+              <!-- cruceta -->
+              <path
+                d="M62 44 h26 v26 h26 v26 h-26 v26 h-26 v-26 h-26 v-26 h26 z"
+              />
+              <!-- los tres botones, en arco como el mando real -->
+              <circle cx="178" cy="100" r="21" />
+              <circle cx="222" cy="84" r="21" />
+              <circle cx="266" cy="68" r="21" />
+            </g>
+            <g
+              text-anchor="middle"
+              font-family="ui-monospace, Menlo, Consolas, monospace"
+            >
+              <!-- flechas de la cruceta -->
+              <g font-size="13" fill="#8a8aa8">
+                <text x="75" y="60">&#9650;</text>
+                <text x="75" y="118">&#9660;</text>
+                <text x="48" y="89">&#9664;</text>
+                <text x="102" y="89">&#9654;</text>
+              </g>
+              <!-- la tecla dentro de cada boton -->
+              <g font-size="19" font-weight="700" fill="#ffffff">
+                <text x="178" y="107">A</text>
+                <text x="222" y="91">S</text>
+                <text x="266" y="75">D</text>
+              </g>
+              <!-- y el boton de consola que es, debajo y dentro del cuerpo -->
+              <g font-size="10" fill="#8a8aa8">
+                <text x="178" y="134">A</text>
+                <text x="222" y="118">B</text>
+                <text x="266" y="102">C</text>
+              </g>
+            </g>
+          </svg>
+
+          <ul class="legend">
+            <li>
+              <span class="key">&#9664;&#9650;&#9660;&#9654;</span>
+              <span>move</span>
+            </li>
+            <li>
+              <span class="key">A</span>
+              <span>map</span>
+            </li>
+            <li>
+              <span class="key">A+S</span>
+              <span>map reveal</span>
+            </li>
+            <li>
+              <span class="key">S</span>
+              <span>pathfinder</span>
+            </li>
+            <li>
+              <span class="key">D</span>
+              <span>menu: sound on/off </span>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </main>
 
     <script>
@@ -193,6 +302,33 @@
       EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
       EJS_color = "#987dfa";
       EJS_startOnLoaded = false;
+
+      // Teclas fijadas al cargar, para no depender de las que trae
+      // EmulatorJS por defecto.
+      //
+      // Los indices son los del RetroPad, no los de la Mega Drive, y los
+      // dos NO coinciden: Genesis Plus GX (el core de segaMD) mapea
+      // A -> RetroPad Y (1), B -> RetroPad B (0) y C -> RetroPad A (8).
+      // De ahi que A/S/D vayan en ese orden aparentemente desordenado.
+      //   4..7  cruceta
+      //   3     START
+      // value es la tecla; value2 el boton de un mando fisico, que se
+      // deja puesto para que un gamepad siga funcionando igual.
+      EJS_defaultControls = {
+        0: {
+          1: { value: "a", value2: "BUTTON_3" }, // Mega Drive A
+          0: { value: "s", value2: "BUTTON_1" }, // Mega Drive B
+          8: { value: "d", value2: "BUTTON_2" }, // Mega Drive C
+          3: { value: "enter", value2: "START" },
+          4: { value: "up arrow", value2: "DPAD_UP" },
+          5: { value: "down arrow", value2: "DPAD_DOWN" },
+          6: { value: "left arrow", value2: "DPAD_LEFT" },
+          7: { value: "right arrow", value2: "DPAD_RIGHT" },
+        },
+        1: {},
+        2: {},
+        3: {},
+      };
     </script>
     <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
   </body>
