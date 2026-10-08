@@ -105,6 +105,50 @@
         .stage {
           grid-template-columns: minmax(0, 1fr);
         }
+
+        /* Vertical, ocupando la pantalla. EmulatorJS dibuja su mando
+           tactil DENTRO del contenedor del juego
+           (.ejs_virtualGamepad_parent, absoluto con bottom:50px y 130px de
+           alto), asi que sobre un contenedor 4:3 se come medio juego.
+           Alargando el contenedor a la altura de la pantalla, el mando cae
+           en la banda negra de abajo.
+           El 120px descuenta el titulo que hay encima. */
+        #game {
+          aspect-ratio: auto;
+          height: calc(100vh - 92px); /* para navegadores sin dvh */
+          height: calc(100dvh - 92px);
+        }
+
+        /* La pieza que lo hace posible: el canvas sigue llenando el
+           contenedor -- no se toca su layout, que es lo que rompio el
+           intento anterior -- pero su CONTENIDO se ajusta sin deformarse.
+           handleResize() de EmulatorJS no mantiene la proporcion, solo
+           alterna clases, asi que sin esto el juego saldria estirado. */
+        /* Y el mando, pegado abajo del todo. Por defecto sus zonas van a
+           bottom:50px; bajarlas despeja mas hueco entre el juego y el. */
+        #game .ejs_virtualGamepad_left,
+        #game .ejs_virtualGamepad_right {
+          bottom: 16px;
+        }
+
+        #game .ejs_canvas {
+          object-fit: contain;
+          /* Y pegado arriba, no centrado: asi el juego queda en la mitad
+             de arriba y el mando solo en la de abajo, separados. Centrado
+             (lo que hace contain por defecto) el juego baja hacia los
+             controles y se juega incomodo. */
+          object-position: top;
+        }
+
+        /* El titulo ocupa menos en movil: todo lo que ahorra se lo lleva
+           el juego. */
+        h1 {
+          font-size: 28px;
+        }
+
+        main {
+          padding-top: 16px;
+        }
       }
 
       .pad svg {
@@ -302,6 +346,33 @@
       EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
       EJS_color = "#987dfa";
       EJS_startOnLoaded = false;
+
+      // Mando tactil reducido a lo que el juego usa de verdad.
+      //
+      // Por defecto EmulatorJS monta para segaMD seis botones (A B C y
+      // X Y Z), Mode, Start y ademas Fast/Slow, que anade siempre. Son
+      // cuatro filas: ocupan casi 350px de alto y se comen el juego. Este
+      // juego solo usa cruceta, A, B y C.
+      //
+      // Definir este array REEMPLAZA el suyo entero, Fast/Slow incluidos.
+      // input_value son indices de RetroPad, no de Mega Drive: 1 = A,
+      // 0 = B, 8 = C (los mismos que usa su propio array por defecto, de
+      // donde estan copiados).
+      EJS_VirtualGamepadSettings = [
+        {
+          type: "dpad",
+          id: "dpad",
+          location: "left",
+          left: "50%",
+          right: "50%",
+          joystickInput: false,
+          inputValues: [4, 5, 6, 7],
+        },
+        { type: "button", text: "A", id: "a", location: "right", right: 145, top: 40, bold: true, input_value: 1 },
+        { type: "button", text: "B", id: "b", location: "right", right: 75, top: 40, bold: true, input_value: 0 },
+        { type: "button", text: "C", id: "c", location: "right", right: 5, top: 40, bold: true, input_value: 8 },
+      ];
+
 
       // Teclas fijadas al cargar, para no depender de las que trae
       // EmulatorJS por defecto.
