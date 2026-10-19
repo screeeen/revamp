@@ -4,23 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OVNI — juego de laberintos para Sega Mega Drive</title>
-    <meta
-      name="description"
-      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
-    />
+    <meta name="description" content="OVNI project" />
     <link rel="canonical" href="https://screenimplosion.com/ovni/" />
 
     <meta property="og:site_name" content="Screen Implosion" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="OVNI — juego de laberintos para Sega Mega Drive"
-    />
-    <meta
-      property="og:description"
-      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
-    />
+    <meta property="og:title" content="OVNI" />
+    <meta property="og:description" content="OVNI" />
     <meta property="og:url" content="https://screenimplosion.com/ovni/" />
     <meta
       property="og:image"
@@ -32,14 +23,8 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@screeeen" />
-    <meta
-      name="twitter:title"
-      content="OVNI — juego de laberintos para Sega Mega Drive"
-    />
-    <meta
-      name="twitter:description"
-      content="OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada."
-    />
+    <meta name="twitter:title" content="OVNI" />
+    <meta name="twitter:description" content="OVNI" />
     <meta
       name="twitter:image"
       content="https://screenimplosion.com/images/og-card.png"
@@ -50,7 +35,7 @@
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "OVNI",
-        "description": "OVNI, el juego de laberintos de js13k portado a Sega Mega Drive con SGDK. Se juega en el navegador, sin instalar nada.",
+        "description": "OVNI",
         "url": "https://screenimplosion.com/ovni/",
         "inLanguage": "es",
         "gamePlatform": ["Sega Mega Drive", "Sega Genesis", "Web browser"],
@@ -261,7 +246,7 @@
   <body>
     <main>
       <header>
-        <h1>eres aparvao</h1>
+        <h1>ovni</h1>
       </header>
 
       <div class="stage">
@@ -368,11 +353,37 @@
           joystickInput: false,
           inputValues: [4, 5, 6, 7],
         },
-        { type: "button", text: "A", id: "a", location: "right", right: 145, top: 40, bold: true, input_value: 1 },
-        { type: "button", text: "B", id: "b", location: "right", right: 75, top: 40, bold: true, input_value: 0 },
-        { type: "button", text: "C", id: "c", location: "right", right: 5, top: 40, bold: true, input_value: 8 },
+        {
+          type: "button",
+          text: "A",
+          id: "a",
+          location: "right",
+          right: 145,
+          top: 40,
+          bold: true,
+          input_value: 1,
+        },
+        {
+          type: "button",
+          text: "B",
+          id: "b",
+          location: "right",
+          right: 75,
+          top: 40,
+          bold: true,
+          input_value: 0,
+        },
+        {
+          type: "button",
+          text: "C",
+          id: "c",
+          location: "right",
+          right: 5,
+          top: 40,
+          bold: true,
+          input_value: 8,
+        },
       ];
-
 
       // Teclas fijadas al cargar, para no depender de las que trae
       // EmulatorJS por defecto.
