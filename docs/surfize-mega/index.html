@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SURFIZE MEGA DRIVE</title>
+    <meta
+      name="description"
+      content="Surfize portado a Sega Mega Drive. Jugable en el navegador."
+    />
+    <link rel="canonical" href="https://screenimplosion.com/surfize-mega/" />
+
+    <meta property="og:site_name" content="Screen Implosion" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SURFIZE MEGA DRIVE" />
+    <meta
+      property="og:description"
+      content="Surfize portado a Sega Mega Drive. Jugable en el navegador."
+    />
+    <meta property="og:url" content="https://screenimplosion.com/surfize-mega/" />
+    <meta
+      property="og:image"
+      content="https://screenimplosion.com/images/surfize_1.gif"
+    />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:alt" content="Surfize" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@screeeen" />
+    <meta name="twitter:title" content="SURFIZE MEGA DRIVE" />
+    <meta
+      name="twitter:description"
+      content="Surfize portado a Sega Mega Drive. Jugable en el navegador."
+    />
+    <meta
+      name="twitter:image"
+      content="https://screenimplosion.com/images/surfize_1.gif"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Surfize (Mega Drive)",
+        "description": "Surfize portado a Sega Mega Drive. Jugable en el navegador.",
+        "url": "https://screenimplosion.com/surfize-mega/",
+        "inLanguage": "es",
+        "gamePlatform": ["Sega Mega Drive", "Sega Genesis", "Web browser"],
+        "image": "https://screenimplosion.com/images/surfize_1.gif",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Screen Implosion",
+          "url": "https://screenimplosion.com/"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #333333;
+        --ink: #00ffff;
+        --fg: #ffffff;
+        --dim: #93a3a3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 16px 64px;
+      }
+
+      .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 28px;
+        align-items: start;
+      }
+
+      @media (max-width: 900px) {
+        .stage {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        #game {
+          aspect-ratio: auto;
+          height: calc(100vh - 92px);
+          height: calc(100dvh - 92px);
+        }
+
+        #game .ejs_canvas {
+          object-fit: contain;
+          object-position: top;
+        }
+
+        #game .ejs_virtualGamepad_left,
+        #game .ejs_virtualGamepad_right {
+          bottom: 16px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        main {
+          padding-top: 16px;
+        }
+      }
+
+      .pad svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .legend {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .legend li {
+        display: flex;
+        gap: 10px;
+        padding: 7px 0;
+        border-bottom: 1px solid rgba(0, 255, 255, 0.18);
+      }
+
+      .key {
+        flex: 0 0 58px;
+        color: var(--ink);
+        border: 1px solid rgba(0, 255, 255, 0.5);
+        border-radius: 4px;
+        padding: 1px 0;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+      }
+
+      header {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 9vw, 56px);
+        letter-spacing: 0.18em;
+        font-weight: 700;
+      }
+
+      .sub {
+        margin: 8px 0 0;
+        color: var(--ink);
+        letter-spacing: 0.14em;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      #game {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        background: #000;
+      }
+
+      h2 {
+        margin: 40px 0 12px;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      a {
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>surfize</h1>
+        <p class="sub">Sega Mega Drive</p>
+      </header>
+
+      <div class="stage">
+        <div id="game"></div>
+
+        <aside class="pad">
+          <h2 style="margin-top: 0">Controles</h2>
+          <svg viewBox="0 0 300 170" role="img" aria-labelledby="padT">
+            <title id="padT">
+              Mando con las teclas del teclado sobre cada boton
+            </title>
+            <g fill="none" stroke="#00ffff" stroke-width="2">
+              <rect x="6" y="26" width="288" height="116" rx="50" />
+              <path
+                d="M62 44 h26 v26 h26 v26 h-26 v26 h-26 v-26 h-26 v-26 h26 z"
+              />
+              <circle cx="178" cy="100" r="21" />
+              <circle cx="222" cy="84" r="21" />
+              <circle cx="266" cy="68" r="21" />
+            </g>
+            <g
+              text-anchor="middle"
+              font-family="ui-monospace, Menlo, Consolas, monospace"
+            >
+              <g font-size="13" fill="#93a3a3">
+                <text x="75" y="60">&#9650;</text>
+                <text x="75" y="118">&#9660;</text>
+                <text x="48" y="89">&#9664;</text>
+                <text x="102" y="89">&#9654;</text>
+              </g>
+              <g font-size="19" font-weight="700" fill="#ffffff">
+                <text x="178" y="107">A</text>
+                <text x="222" y="91">S</text>
+                <text x="266" y="75">D</text>
+              </g>
+              <g font-size="10" fill="#93a3a3">
+                <text x="178" y="134">A</text>
+                <text x="222" y="118">B</text>
+                <text x="266" y="102">C</text>
+              </g>
+            </g>
+          </svg>
+
+          <ul class="legend">
+            <li>
+              <span class="key">ENTER</span>
+              <span>credito</span>
+            </li>
+            <li>
+              <span class="key">A</span>
+              <span>start</span>
+            </li>
+            <li>
+              <span class="key">&#9664;&#9650;&#9660;&#9654;</span>
+              <span>move</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <script>
+      EJS_player = "#game";
+      EJS_core = "segaMD";
+      EJS_gameUrl = "surfize-mega.bin";
+      EJS_gameName = "SURFIZE";
+      EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+      EJS_color = "#00ffff";
+      EJS_startOnLoaded = false;
+
+      EJS_defaultOptions = {
+        "genesis_plus_gx_region_detect": "pal",
+      };
+
+      EJS_VirtualGamepadSettings = [
+        {
+          type: "dpad",
+          id: "dpad",
+          location: "left",
+          left: "50%",
+          right: "50%",
+          joystickInput: false,
+          inputValues: [4, 5, 6, 7],
+        },
+        {
+          type: "button",
+          text: "A",
+          id: "a",
+          location: "right",
+          right: 5,
+          top: 40,
+          bold: true,
+          input_value: 1,
+        },
+        {
+          type: "button",
+          text: "CREDITO",
+          id: "start",
+          location: "right",
+          right: 75,
+          top: 40,
+          bold: true,
+          input_value: 3,
+        },
+      ];
+
+      EJS_defaultControls = {
+        0: {
+          1: { value: "a", value2: "BUTTON_3" },
+          0: { value: "s", value2: "BUTTON_1" },
+          8: { value: "d", value2: "BUTTON_2" },
+          3: { value: "enter", value2: "START" },
+          4: { value: "up arrow", value2: "DPAD_UP" },
+          5: { value: "down arrow", value2: "DPAD_DOWN" },
+          6: { value: "left arrow", value2: "DPAD_LEFT" },
+          7: { value: "right arrow", value2: "DPAD_RIGHT" },
+        },
+        1: {},
+        2: {},
+        3: {},
+      };
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+  </body>
+</html>

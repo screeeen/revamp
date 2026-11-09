@@ -23,6 +23,7 @@ docs/
 ├── presskit/index.html     /presskit/
 ├── blogPage/index.html     /blogPage/
 ├── ovni/                   /ovni/       (página del port a Mega Drive + ROM)
+├── surfize-mega/           /surfize-mega/  (Surfize en Mega Drive + ROM)
 ├── css/site.css            toda la hoja de estilos
 ├── images/                 25 imágenes
 ├── images_output/          44 fotogramas de OUTPUT
