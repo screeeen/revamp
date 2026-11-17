@@ -7,6 +7,14 @@
 <meta name="description" content="An endless free fall through minimal landscapes full of strange sculptures. Official selection at Tokyo Game Show 2016, AZPlay and Busan Indie Connect.">
 <link rel="canonical" href="https://screenimplosion.com/downhill/">
 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Screen Implosion">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <meta property="og:site_name" content="Screen Implosion">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
@@ -14,44 +22,135 @@
 <meta property="og:description" content="An endless free fall through minimal landscapes full of strange sculptures. Official selection at Tokyo Game Show 2016, AZPlay and Busan Indie Connect.">
 <meta property="og:url" content="https://screenimplosion.com/downhill/">
 <meta property="og:image" content="https://screenimplosion.com/images/icon_protoSki_1024x512-744x372.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="744">
 <meta property="og:image:height" content="372">
-<meta property="og:image:alt" content="Downhill* Chapter One">
+<meta property="og:image:alt" content="Downhill* Chapter One key art">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@screeeen">
 <meta name="twitter:title" content="Downhill* Chapter One | Screen Implosion">
 <meta name="twitter:description" content="An endless free fall through minimal landscapes full of strange sculptures. Official selection at Tokyo Game Show 2016, AZPlay and Busan Indie Connect.">
 <meta name="twitter:image" content="https://screenimplosion.com/images/icon_protoSki_1024x512-744x372.png">
+<meta name="twitter:image:alt" content="Downhill* Chapter One key art">
 
 <link rel="stylesheet" href="../css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Downhill* Chapter One",
-  "description": "Endless free fall on a minimal landscape full of strange sculptures.",
-  "url": "https://screenimplosion.com/downhill/",
-  "image": "https://screenimplosion.com/images/icon_protoSki_1024x512-744x372.png",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://screenimplosion.com/#organization",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://screenimplosion.com/images/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://screenimplosion.com/images/og-card.png",
+      "foundingDate": "2015",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Berlin, Germany"
+      },
+      "description": "Games label and producer of classic arcade games with a contemporary twist."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://screenimplosion.com/#website",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://screenimplosion.com/downhill/#game",
+      "name": "Downhill* Chapter One",
+      "description": "Endless free fall on a minimal landscape full of strange sculptures and environments. Fast and smooth scrolling action, architecture graphics and avant-garde tunes.",
+      "url": "https://screenimplosion.com/downhill/",
+      "image": [
+        "https://screenimplosion.com/images/icon_protoSki_1024x512-744x372.png",
+        "https://screenimplosion.com/images/monument.png",
+        "https://screenimplosion.com/images/kao_.png",
+        "https://screenimplosion.com/images/palc.png",
+        "https://screenimplosion.com/images/pallozas.png",
+        "https://screenimplosion.com/images/pico.png",
+        "https://screenimplosion.com/images/vertical.png"
+      ],
+      "inLanguage": "en",
+      "applicationCategory": "Game",
+      "author": {
+        "@id": "https://screenimplosion.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      },
+      "genre": [
+        "Arcade",
+        "Endless runner"
+      ],
+      "gamePlatform": "Mac",
+      "operatingSystem": "macOS",
+      "playMode": "SinglePlayer",
+      "award": [
+        "Official Selection Tokyo Game Show 2016",
+        "Official Selection Radius Festival Wien 2016",
+        "Official Selection Game Happens! Genoa 2016",
+        "Official Selection AZPlay Bilbao 2015",
+        "Official Selection Busan Indie Connect 2015",
+        "Official Selection Casual Connect Tel Aviv 2015"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://screenimplosion.com/Downhill_Chapter_One_osx.zip"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Screen Implosion",
+          "item": "https://screenimplosion.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Downhill* Chapter One",
+          "item": "https://screenimplosion.com/downhill/"
+        }
+      ],
+      "@id": "https://screenimplosion.com/downhill/#breadcrumb"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://screenimplosion.com/downhill/#webpage",
+      "url": "https://screenimplosion.com/downhill/",
+      "name": "Downhill* Chapter One | Screen Implosion",
+      "isPartOf": {
+        "@id": "https://screenimplosion.com/#website"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-11-17",
+      "mainEntity": {
+        "@id": "https://screenimplosion.com/downhill/#game"
+      },
+      "breadcrumb": {
+        "@id": "https://screenimplosion.com/downhill/#breadcrumb"
+      }
+    }
+  ]
 }
 </script>
 </head>

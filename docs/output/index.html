@@ -7,6 +7,14 @@
 <meta name="description" content="A documentary manifesto about computer arts and games by Miguel Alva, filmed at A MAZE./Berlin in April 2017. Featuring 34 games. To be viewed by April 2067.">
 <link rel="canonical" href="https://screenimplosion.com/output/">
 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Screen Implosion">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <meta property="og:site_name" content="Screen Implosion">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
@@ -14,6 +22,7 @@
 <meta property="og:description" content="A documentary manifesto about computer arts and games by Miguel Alva, filmed at A MAZE./Berlin in April 2017. Featuring 34 games. To be viewed by April 2067.">
 <meta property="og:url" content="https://screenimplosion.com/output/">
 <meta property="og:image" content="https://screenimplosion.com/images_output/subtitulos.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
 <meta property="og:image:alt" content="Still from the OUTPUT documentary">
@@ -23,31 +32,101 @@
 <meta name="twitter:title" content="OUTPUT — a documentary manifesto | Screen Implosion">
 <meta name="twitter:description" content="A documentary manifesto about computer arts and games by Miguel Alva, filmed at A MAZE./Berlin in April 2017. Featuring 34 games. To be viewed by April 2067.">
 <meta name="twitter:image" content="https://screenimplosion.com/images_output/subtitulos.jpg">
+<meta name="twitter:image:alt" content="Still from the OUTPUT documentary">
 
 <link rel="stylesheet" href="../css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Movie",
-  "name": "OUTPUT",
-  "description": "A manifesto about computer arts and games, filmed during A MAZE./Berlin 2017.",
-  "url": "https://screenimplosion.com/output/",
-  "image": "https://screenimplosion.com/images_output/subtitulos.jpg",
-  "director": {
-    "@type": "Person",
-    "name": "Miguel Alva"
-  },
-  "datePublished": "2017",
-  "productionCompany": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://screenimplosion.com/#organization",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://screenimplosion.com/images/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://screenimplosion.com/images/og-card.png",
+      "foundingDate": "2015",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Berlin, Germany"
+      },
+      "description": "Games label and producer of classic arcade games with a contemporary twist."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://screenimplosion.com/#website",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    },
+    {
+      "@type": "Movie",
+      "@id": "https://screenimplosion.com/output/#movie",
+      "name": "OUTPUT",
+      "description": "A documentary manifesto about computer arts and games, filmed during A MAZE./Berlin in April 2017. Featuring 34 games.",
+      "url": "https://screenimplosion.com/output/",
+      "image": "https://screenimplosion.com/images_output/subtitulos.jpg",
+      "genre": "Documentary",
+      "inLanguage": "en",
+      "director": {
+        "@type": "Person",
+        "name": "Miguel Alva"
+      },
+      "dateCreated": "2017-04",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "A MAZE./Berlin, Germany"
+      },
+      "productionCompany": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Screen Implosion",
+          "item": "https://screenimplosion.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "OUTPUT",
+          "item": "https://screenimplosion.com/output/"
+        }
+      ],
+      "@id": "https://screenimplosion.com/output/#breadcrumb"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://screenimplosion.com/output/#webpage",
+      "url": "https://screenimplosion.com/output/",
+      "name": "OUTPUT — a documentary manifesto | Screen Implosion",
+      "isPartOf": {
+        "@id": "https://screenimplosion.com/#website"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-11-17",
+      "mainEntity": {
+        "@id": "https://screenimplosion.com/output/#movie"
+      },
+      "breadcrumb": {
+        "@id": "https://screenimplosion.com/output/#breadcrumb"
+      }
+    }
+  ]
 }
 </script>
 </head>

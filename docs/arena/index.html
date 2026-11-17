@@ -7,6 +7,14 @@
 <meta name="description" content="A fast arcade shooter of 10-second to 2-minute sessions, with an auto-lock combat capsule and five special weapons. Classic arcade chaos, contemporary feel.">
 <link rel="canonical" href="https://screenimplosion.com/arena/">
 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Screen Implosion">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <meta property="og:site_name" content="Screen Implosion">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
@@ -14,44 +22,121 @@
 <meta property="og:description" content="A fast arcade shooter of 10-second to 2-minute sessions, with an auto-lock combat capsule and five special weapons. Classic arcade chaos, contemporary feel.">
 <meta property="og:url" content="https://screenimplosion.com/arena/">
 <meta property="og:image" content="https://screenimplosion.com/images/arena_banner.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="950">
 <meta property="og:image:height" content="419">
-<meta property="og:image:alt" content="Arena Monster Alien Shooting Chaos">
+<meta property="og:image:alt" content="Arena Monster Alien Shooting Chaos title screen">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@screeeen">
 <meta name="twitter:title" content="Arena Monster Alien Shooting Chaos | Screen Implosion">
 <meta name="twitter:description" content="A fast arcade shooter of 10-second to 2-minute sessions, with an auto-lock combat capsule and five special weapons. Classic arcade chaos, contemporary feel.">
 <meta name="twitter:image" content="https://screenimplosion.com/images/arena_banner.png">
+<meta name="twitter:image:alt" content="Arena Monster Alien Shooting Chaos title screen">
 
 <link rel="stylesheet" href="../css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Arena Monster Alien Shooting Chaos",
-  "description": "Arcade shooter with short sessions and an addictive loop between them.",
-  "url": "https://screenimplosion.com/arena/",
-  "image": "https://screenimplosion.com/images/arena_banner.png",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://screenimplosion.com/#organization",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://screenimplosion.com/images/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://screenimplosion.com/images/og-card.png",
+      "foundingDate": "2015",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Berlin, Germany"
+      },
+      "description": "Games label and producer of classic arcade games with a contemporary twist."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://screenimplosion.com/#website",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://screenimplosion.com/arena/#game",
+      "name": "Arena Monster Alien Shooting Chaos",
+      "description": "Arcade shooter with short sessions of 10 seconds to 2 minutes, an auto-lock combat capsule and five special weapons.",
+      "url": "https://screenimplosion.com/arena/",
+      "image": [
+        "https://screenimplosion.com/images/arena_banner.png",
+        "https://screenimplosion.com/images/arena_1.png",
+        "https://screenimplosion.com/images/arena_2.png",
+        "https://screenimplosion.com/images/arena_3.png",
+        "https://screenimplosion.com/images/arena_4.png"
+      ],
+      "inLanguage": "en",
+      "applicationCategory": "Game",
+      "author": {
+        "@id": "https://screenimplosion.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      },
+      "genre": [
+        "Arcade",
+        "Shooter"
+      ],
+      "gamePlatform": "Mobile",
+      "playMode": "SinglePlayer",
+      "numberOfPlayers": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Screen Implosion",
+          "item": "https://screenimplosion.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Arena Monster Alien Shooting Chaos",
+          "item": "https://screenimplosion.com/arena/"
+        }
+      ],
+      "@id": "https://screenimplosion.com/arena/#breadcrumb"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://screenimplosion.com/arena/#webpage",
+      "url": "https://screenimplosion.com/arena/",
+      "name": "Arena Monster Alien Shooting Chaos | Screen Implosion",
+      "isPartOf": {
+        "@id": "https://screenimplosion.com/#website"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-11-17",
+      "mainEntity": {
+        "@id": "https://screenimplosion.com/arena/#game"
+      },
+      "breadcrumb": {
+        "@id": "https://screenimplosion.com/arena/#breadcrumb"
+      }
+    }
+  ]
 }
 </script>
 </head>

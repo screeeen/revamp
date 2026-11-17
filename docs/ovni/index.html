@@ -3,48 +3,161 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OVNI</title>
-    <meta name="description" content="OVNI" />
+    <title>OVNI — juego de Mega Drive en el navegador | Screen Implosion</title>
+    <meta
+      name="description"
+      content="OVNI, un juego de laberintos para Sega Mega Drive de Screen Implosion. Juégalo gratis en el navegador con teclado, mando o controles táctiles."
+    />
     <link rel="canonical" href="https://screenimplosion.com/ovni/" />
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Screen Implosion" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32.png"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:site_name" content="Screen Implosion" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="OVNI" />
-    <meta property="og:description" content="OVNI" />
+    <meta
+      property="og:title"
+      content="OVNI — juego de Mega Drive en el navegador | Screen Implosion"
+    />
+    <meta
+      property="og:description"
+      content="OVNI, un juego de laberintos para Sega Mega Drive de Screen Implosion. Juégalo gratis en el navegador con teclado, mando o controles táctiles."
+    />
     <meta property="og:url" content="https://screenimplosion.com/ovni/" />
     <meta
       property="og:image"
       content="https://screenimplosion.com/images/og-card.png"
     />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Screen Implosion" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@screeeen" />
-    <meta name="twitter:title" content="OVNI" />
-    <meta name="twitter:description" content="OVNI" />
+    <meta
+      name="twitter:title"
+      content="OVNI — juego de Mega Drive en el navegador | Screen Implosion"
+    />
+    <meta
+      name="twitter:description"
+      content="OVNI, un juego de laberintos para Sega Mega Drive de Screen Implosion. Juégalo gratis en el navegador con teclado, mando o controles táctiles."
+    />
     <meta
       name="twitter:image"
       content="https://screenimplosion.com/images/og-card.png"
     />
+    <meta name="twitter:image:alt" content="Screen Implosion" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "OVNI",
-        "description": "OVNI",
-        "url": "https://screenimplosion.com/ovni/",
-        "inLanguage": "es",
-        "gamePlatform": ["Sega Mega Drive", "Sega Genesis", "Web browser"],
-        "image": "https://screenimplosion.com/images/og-card.png",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Screen Implosion",
-          "url": "https://screenimplosion.com/"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://screenimplosion.com/#organization",
+            "name": "Screen Implosion",
+            "url": "https://screenimplosion.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://screenimplosion.com/images/icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://screenimplosion.com/images/og-card.png",
+            "foundingDate": "2015",
+            "foundingLocation": {
+              "@type": "Place",
+              "name": "Berlin, Germany"
+            },
+            "description": "Games label and producer of classic arcade games with a contemporary twist."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://screenimplosion.com/#website",
+            "name": "Screen Implosion",
+            "url": "https://screenimplosion.com/",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://screenimplosion.com/#organization"
+            }
+          },
+          {
+            "@type": "VideoGame",
+            "@id": "https://screenimplosion.com/ovni/#game",
+            "name": "OVNI",
+            "description": "Juego de laberintos para Sega Mega Drive, jugable gratis en el navegador.",
+            "url": "https://screenimplosion.com/ovni/",
+            "image": ["https://screenimplosion.com/images/og-card.png"],
+            "inLanguage": "es",
+            "applicationCategory": "Game",
+            "author": {
+              "@id": "https://screenimplosion.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://screenimplosion.com/#organization"
+            },
+            "genre": ["Arcade", "Maze"],
+            "gamePlatform": ["Sega Mega Drive", "Sega Genesis", "Web browser"],
+            "playMode": "SinglePlayer",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://screenimplosion.com/ovni/"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Screen Implosion",
+                "item": "https://screenimplosion.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "OVNI",
+                "item": "https://screenimplosion.com/ovni/"
+              }
+            ],
+            "@id": "https://screenimplosion.com/ovni/#breadcrumb"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://screenimplosion.com/ovni/#webpage",
+            "url": "https://screenimplosion.com/ovni/",
+            "name": "OVNI — juego de Mega Drive en el navegador | Screen Implosion",
+            "isPartOf": {
+              "@id": "https://screenimplosion.com/#website"
+            },
+            "inLanguage": "es",
+            "dateModified": "2026-11-17",
+            "mainEntity": {
+              "@id": "https://screenimplosion.com/ovni/#game"
+            },
+            "breadcrumb": {
+              "@id": "https://screenimplosion.com/ovni/#breadcrumb"
+            }
+          }
+        ]
       }
     </script>
     <style>

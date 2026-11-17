@@ -1,43 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://screenimplosion.com/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/og-card.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/cupMinute.gif</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/arena/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/arena_banner.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/arena_1.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/arena_2.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/arena_3.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/arena_4.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/surfize/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize-og.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize_1.gif</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize_2.gif</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize_3.gif</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize_4.gif</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize_PET.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/desert/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/desert.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/downhill/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/icon_protoSki_1024x512-744x372.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/Awards_layer_vert.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/monument.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/kao_.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/palc.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/pallozas.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/pico.png</image:loc></image:image>
+    <image:image><image:loc>https://screenimplosion.com/images/vertical.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/output/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://screenimplosion.com/images_output/subtitulos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://screenimplosion.com/ovni/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://screenimplosion.com/surfize-mega/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://screenimplosion.com/images/surfize-og.png</image:loc></image:image>
   </url>
 </urlset>

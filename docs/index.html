@@ -7,6 +7,14 @@
 <meta name="description" content="Games label producing classic arcade games with a contemporary twist, founded in Berlin in 2015. Arena, Surfize, Desert Peekaboo, Downhill* and OUTPUT.">
 <link rel="canonical" href="https://screenimplosion.com/">
 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Screen Implosion">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <meta property="og:site_name" content="Screen Implosion">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
@@ -14,6 +22,7 @@
 <meta property="og:description" content="Games label producing classic arcade games with a contemporary twist, founded in Berlin in 2015. Arena, Surfize, Desert Peekaboo, Downhill* and OUTPUT.">
 <meta property="og:url" content="https://screenimplosion.com/">
 <meta property="og:image" content="https://screenimplosion.com/images/og-card.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Screen Implosion">
@@ -23,24 +32,58 @@
 <meta name="twitter:title" content="Screen Implosion — independent arcade games label">
 <meta name="twitter:description" content="Games label producing classic arcade games with a contemporary twist, founded in Berlin in 2015. Arena, Surfize, Desert Peekaboo, Downhill* and OUTPUT.">
 <meta name="twitter:image" content="https://screenimplosion.com/images/og-card.png">
+<meta name="twitter:image:alt" content="Screen Implosion">
 
 <link rel="stylesheet" href="css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Screen Implosion",
-  "url": "https://screenimplosion.com/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Screen Implosion",
-    "url": "https://screenimplosion.com/",
-    "logo": "https://screenimplosion.com/images/sc_anim_glitch-2.gif",
-    "foundingDate": "2015",
-    "foundingLocation": "Berlin, Germany",
-    "description": "Games label and producer of classic arcade games with a contemporary twist."
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://screenimplosion.com/#organization",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://screenimplosion.com/images/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://screenimplosion.com/images/og-card.png",
+      "foundingDate": "2015",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Berlin, Germany"
+      },
+      "description": "Games label and producer of classic arcade games with a contemporary twist."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://screenimplosion.com/#website",
+      "name": "Screen Implosion",
+      "url": "https://screenimplosion.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://screenimplosion.com/#webpage",
+      "url": "https://screenimplosion.com/",
+      "name": "Screen Implosion — independent arcade games label",
+      "isPartOf": {
+        "@id": "https://screenimplosion.com/#website"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-11-17",
+      "about": {
+        "@id": "https://screenimplosion.com/#organization"
+      }
+    }
+  ]
 }
 </script>
 </head>
