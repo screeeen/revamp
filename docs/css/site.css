@@ -175,7 +175,7 @@ p {
 }
 
 /* más específica que .pic y .img */
-.centro img { width: 100%; }
+.centro img, .centro video { width: 100%; }
 
 /* SideMenuStyle — un bloque arriba y otro abajo */
 .side-menu {
@@ -201,7 +201,7 @@ p {
 .grid { column-count: 2; }
 
 /* mantiene la proporción de los width/height del HTML */
-img { height: auto; }
+img, video { height: auto; }
 
 /* ImageStyle */
 .img { max-width: 100%; }
